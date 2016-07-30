@@ -7,7 +7,7 @@ public extension String {
   }
 
   public func addingBash(color: Color, style: TextStyle) -> String {
-    var string = String(self)
+    var string = self
     string.addedBash(color: color, style: style)
     return string
   }
