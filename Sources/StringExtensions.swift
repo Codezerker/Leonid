@@ -1,5 +1,5 @@
 public extension String {
- 
+
   public mutating func addedBash(color: Color, style: TextStyle) {
     self = style.render() + color.render()
            + self
@@ -14,19 +14,19 @@ public extension String {
 }
 
 internal protocol StringRendering {
-  
+
   func render() -> String
 }
 
 extension Color: StringRendering {
-  
+
   func render() -> String {
     return "\(rawValue)m"
   }
 }
 
 extension TextStyle: StringRendering {
-  
+
   func render() -> String {
     return "\u{1B}[\(rawValue);"
   }
